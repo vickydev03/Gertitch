@@ -3,12 +3,10 @@ import { useGSAP } from "@gsap/react";
 
 import { TextPlugin } from "gsap/TextPlugin";
 import MobileNav from "./MobileNav";
-import { useState } from "react";
 
 gsap.registerPlugin(useGSAP, TextPlugin);
 
 function NavBar() {
-  const [open, setOpen] = useState(false);
   const navItems = ["Home", "pages", "Contact us", "Blog", "Landing"];
   return (
     <>

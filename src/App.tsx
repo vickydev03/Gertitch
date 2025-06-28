@@ -1,4 +1,4 @@
-import React from "react";
+import  { useEffect, useRef } from "react";
 import NavBar from "./component/NavBar";
 import Hero from "./component/Hero";
 import About from "./component/About";
@@ -10,10 +10,23 @@ import NewsLetter from "./component/NewsLetter";
 import Footer from "./component/Footer";
 import Gallery from "./component/Gallery";
 // import About from "./About";
-
+import { ReactLenis } from "lenis/react";
+import gsap from "gsap";
 function App() {
+  const lenisRef = useRef<any|null>(null);
+
+  useEffect(() => {
+    function update(time:number) {
+      lenisRef.current?.lenis?.raf(time * 1000);
+    }
+
+    gsap.ticker.add(update);
+
+    return () => gsap.ticker.remove(update);
+  }, []);
   return (
     <div>
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <NavBar />
       <Hero />
       <About />

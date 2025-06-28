@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import Swipper_com from "./Swipper_com";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";

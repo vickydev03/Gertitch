@@ -3,13 +3,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
 import "./style.css";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
+
 function Swipper_com() {
   return (
     <>
@@ -31,10 +29,7 @@ function Swipper_com() {
         className="mySwiper"
       >
         <SwiperSlide>
-          {/* <div className=" relative w-full h-full"> */}
           <img src="/gallery01.png" className=" object-contain" alt="01" />
-
-          {/* </div> */}
         </SwiperSlide>
 
         <SwiperSlide>
